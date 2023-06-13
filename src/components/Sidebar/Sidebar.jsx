@@ -37,7 +37,7 @@ const Sidebar = ({ setMobileOpen }) => {
         />
       </Link>
       <Divider />
-      <List>
+      {/* <List>
         <ListSubheader>Categories</ListSubheader>
         {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to='/'>
@@ -53,17 +53,17 @@ const Sidebar = ({ setMobileOpen }) => {
       <Divider />
       <List>
         <ListSubheader>Genres</ListSubheader>
-        {demoCategories.map(({ label, value }) => (
-          <Link key={value} className={classes.links} to='/'>
+        {demoCategories.map(({ name, value }) => (
+          <Link key={name} className={classes.links} to='/'>
             <ListItem onClick={() => { }} button>
               <ListItemIcon>
                 <img src={redLogo} className={classes.genreImages} height={30} />
               </ListItemIcon>
-              <ListItemText primary={label} />
+              <ListItemText primary={name} />
             </ListItem>
           </Link>
         ))}
-      </List>
+      </List> */}
     </>
   )
 }
