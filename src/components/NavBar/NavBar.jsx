@@ -16,7 +16,6 @@ const NavBar = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const classes = useStyles();
-  console.log(user);
   const token = localStorage.getItem('request_token');
   const sessionIdFromLocalStorage = localStorage.getItem('session_id');
 
