@@ -18,6 +18,7 @@ const MovieInformation = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+
   const { data, isFetching, error } = useGetMovieQuery(id);
   const { data: favoriteMovies } = useGetListQuery({ listName: 'favorite/movies', accountId: user.id, sessionId: localStorage.getItem('session_id'), page: 1 });
   const { data: watchlistMovies } = useGetListQuery({ listName: 'watchlist/movies', accountId: user.id, sessionId: localStorage.getItem('session_id'), page: 1 });
@@ -33,8 +34,6 @@ const MovieInformation = () => {
   useEffect(() => {
     setIsMovieWatchlisted(!!watchlistMovies?.results?.find((movie) => movie?.id === data?.id));
   }, [watchlistMovies, data]);
-  
-
 
   const addToFavorites = async () => {
     await axios.post(`https://api.themoviedb.org/3/account/${user.id}/favorite?api_key=${process.env.REACT_APP_TMDB_KEY}&session_id=${localStorage.getItem('session_id')}`, {
@@ -58,8 +57,6 @@ const MovieInformation = () => {
     setIsMovieWatchlisted((prev) => !prev);
   };
 
-
-
   if (isFetching) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">
@@ -75,7 +72,6 @@ const MovieInformation = () => {
       </Box>
     );
   }
-
 
   return (
     <Grid container className={classes.containerSpaceAround}>
@@ -117,7 +113,7 @@ const MovieInformation = () => {
                 {genre?.name}
               </Typography>
             </Link>
-          ))}
+          )) }
         </Grid>
         <Typography variant="h5" gutterBottom style={{ marginTop: '10px' }}>
           Overview
@@ -166,14 +162,13 @@ const MovieInformation = () => {
           </div>
         </Grid>
       </Grid>
-      <Box marginTop="5rem" width='100%'>
-        <Typography variant='h3' gutterBottom align='center'>
+      <Box marginTop="5rem" width="100%">
+        <Typography variant="h3" gutterBottom align="center">
           You might also like
         </Typography>
         {recommendations
           ? <MovieList movies={recommendations} numberOfMovies={12} />
-          : <Box>Sorry, noting was found.</Box>
-        }
+          : <Box>Sorry, nothing was found.</Box>}
       </Box>
       <Modal
         closeAfterTransition
@@ -193,7 +188,7 @@ const MovieInformation = () => {
         )}
       </Modal>
     </Grid>
-  )
-}
+  );
+};
 
-export default MovieInformation
+export default MovieInformation;
