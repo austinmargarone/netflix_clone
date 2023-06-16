@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Box, CircularProgress, useMediaQuery, Typography } from '@mui/material'
+import { Box, CircularProgress, useMediaQuery, Typography, Pagination } from '@mui/material'
 import { useSelector } from 'react-redux';
 import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
-
 import { useGetMoviesQuery } from '../../services/TMDB.js';
-import MovieList from '../MovieList/MovieList.jsx';
+import { MovieList } from '..';
 
 const Movies = () => {
   const [page, setPage] = useState(1);
@@ -36,7 +35,6 @@ const Movies = () => {
   return (
     <div>
       <MovieList movies={data} />
-      <Pagination />
     </div>
   )
 }
