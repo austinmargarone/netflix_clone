@@ -23,7 +23,10 @@ const Sidebar = ({ setMobileOpen }) => {
   const { data, isFetching } = useGetGenresQuery();
   const dispatch = useDispatch();
 
-  console.log(data);
+  useEffect(() => {
+    setMobileOpen(false);  
+  }, [genreIdOrCategoryName]);
+  
 
   return (
     <>
