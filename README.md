@@ -23,7 +23,7 @@ Your go-to app for effortlessly discovering the latest movies. Easily search and
 
 ## Demo
 
-[Include a link or screenshot/gif of your project in action.
+Visit the applicatoin
 ](https://filmsearchapp.vercel.app/)
 
 ## Technologies Used
