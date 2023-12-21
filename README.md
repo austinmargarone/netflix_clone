@@ -23,7 +23,7 @@ Your go-to app for effortlessly discovering the latest movies. Easily search and
 
 ## Demo
 
-[Visit Website]([https://www.openai.com/](https://filmsearchapp.vercel.app/))
+[Visit Website](https://filmsearchapp.vercel.app/)
 
 ## Technologies Used
 
