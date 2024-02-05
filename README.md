@@ -27,7 +27,7 @@ Your go-to app for effortlessly discovering the latest movies. Easily search and
 
 ## Technologies Used
 
-HTML, TailwindCSS, Git & GitHub, React, Sanity, MatrialUI
+HTML, TailwindCSS, Git & GitHub, React, Sanity, MaterialUI
 
 ## Features
 
