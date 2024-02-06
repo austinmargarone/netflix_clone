@@ -43,6 +43,7 @@ git clone git@github.com:austinmargarone/netflix_clone.git
 cd your-repo
 npm install
 npm start
+   ```
 
 
 ## Contributing
