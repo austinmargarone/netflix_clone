@@ -2,6 +2,9 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+![Preview Image](netflixpreview.png)
+
+
 ## Description
 
 Your go-to app for effortlessly discovering the latest movies. Easily search and find the perfect film based on your preferences. Whether it's action, drama, or comedy, Filmpire has you covered. Welcome to a user-friendly interface where your perfect film night is just a search away.
